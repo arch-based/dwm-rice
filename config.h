@@ -64,7 +64,8 @@ static const char *filecmd[] = { "thunar", NULL };
 static const char *powermenu[] = { "powermenu", NULL };
 static const char *lockcmd[] = { "sh", "-c", "/home/arch/.local/bin/i3lock", NULL };
 static const char *clipmenu[] = { "clipmenu", NULL };
-
+static const char *emojicmd[] = { "rofi", "-show", "emoji", "-p", "Emoji Selector", NULL };
+static const char *qcalccmd[] = { "rofi", "-show", "calc", "-p", "Calculator", NULL };
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
@@ -73,7 +74,9 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_e,      spawn,          {.v = filecmd } },
 	{ MODKEY,                       XK_b,      spawn,          {.v = powermenu } },
 	{ MODKEY,                       XK_l,      spawn,          {.v = lockcmd } },
-	{ MODKEY,                       XK_period, spawn,          {.v = clipmenu } },
+	{ MODKEY,                       XK_v,      spawn,          {.v = clipmenu } },
+	{ MODKEY,                       XK_period, spawn,          {.v = emojicmd } },
+	{ MODKEY,                       XK_comma,  spawn,          {.v = qcalccmd } },
 	{ MODKEY|ShiftMask,             XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
