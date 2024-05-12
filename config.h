@@ -62,7 +62,7 @@ static const char *termcmd[]  = { "kitty", NULL };
 static const char *firefoxcmd[] = { "firefox", NULL };
 static const char *filecmd[] = { "thunar", NULL };
 static const char *powermenu[] = { "powermenu", NULL };
-static const char *lockcmd[] = { "/home/arch/.local/bin/i3lock", NULL };
+static const char *lockcmd[] = { "sh", "-c", "/home/arch/.local/bin/i3lock", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
