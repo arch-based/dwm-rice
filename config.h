@@ -62,10 +62,10 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *firefoxcmd[] = { "firejail", "firefox", NULL };
 static const char *filecmd[] = { "thunar", NULL };
 static const char *powermenu[] = { "powermenu", NULL };
-static const char *lockcmd[] = { "sh", "-c", "/home/arch/.local/bin/i3lock", NULL };
+static const char *lockcmd[] = { "slock", NULL };
 static const char *clipmenu[] = { "clipmenu", NULL };
-static const char *emojicmd[] = { "rofi", "-show", "emoji", "-p", "Emoji Selector", NULL };
-static const char *qcalccmd[] = { "rofi", "-show", "calc", "-p", "Calculator", NULL };
+static const char *emojicmd[] = { "rofi", "-show", "emoji", NULL };
+static const char *qcalccmd[] = { "rofi", "-show", "calc", NULL };
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
