@@ -62,6 +62,7 @@ static const char *termcmd[]  = { "kitty", NULL };
 static const char *firefoxcmd[] = { "firefox", NULL };
 static const char *filecmd[] = { "thunar", NULL };
 static const char *powermenu[] = { "powermenu", NULL };
+static const char *lockcmd[] = { "/home/arch/.local/bin/i3lock", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -70,13 +71,14 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_f,      spawn,          {.v = firefoxcmd } },
 	{ MODKEY,                       XK_e,      spawn,          {.v = filecmd } },
 	{ MODKEY,                       XK_b,      spawn,          {.v = powermenu } },
+	{ MODKEY,                       XK_l,      spawn,          {.v = lockcmd } },
 	{ MODKEY|ShiftMask,             XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
 	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
-	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
+	{ MODKEY|ShiftMask,             XK_l,      setmfact,       {.f = +0.05} },
 	{ MODKEY|ShiftMask,             XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY,                       XK_q,      killclient,     {0} },
